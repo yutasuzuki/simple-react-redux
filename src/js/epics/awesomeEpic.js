@@ -1,6 +1,5 @@
-import 'rxjs/add/operator/mapTo'
-import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/delay'
+import 'rxjs/add/operator/mapTo'
 import { AWESOME_EVENT, asyncEvent } from '../actions'
 
 export const awesomeEpic = (action$) => {
