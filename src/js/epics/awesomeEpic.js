@@ -1,9 +1,10 @@
 import 'rxjs/add/operator/mapTo'
 import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/delay'
+import { AWESOME_EVENT, asyncEvent } from '../actions'
 
 export const awesomeEpic = (action$) => {
-  return action$.filter(action => action.type === 'AWESOME_EVENT')
-                .delay(1000)
-                .mapTo({ type: 'ASYNC_EVENT' })
+  return action$.ofType(AWESOME_EVENT)
+                .delay(2000)
+                .mapTo(asyncEvent())
 }

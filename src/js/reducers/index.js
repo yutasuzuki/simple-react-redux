@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { AWESOME_EVENT, ASYNC_EVENT } from '../actions/'
 
-const awesome = (state = false, action) => {
+const awesomeReducer = (state = false, action) => {
   switch (action.type) {
     case AWESOME_EVENT:
       return state = !state
@@ -14,7 +14,7 @@ const awesome = (state = false, action) => {
 };
 
 const reducers = combineReducers({
-  awesome
+  awesome: awesomeReducer
 });
 
 export default reducers
